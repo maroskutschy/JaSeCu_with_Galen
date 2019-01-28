@@ -1,0 +1,17 @@
+
+@objects
+    email       id      email
+    password    id      pass
+    loginButton xpath   //input[@data-testid='royal_login_button']
+
+= Main section =
+
+    email:
+        left-of password
+
+    loginButton:
+        left-of password
+
+
+
+
