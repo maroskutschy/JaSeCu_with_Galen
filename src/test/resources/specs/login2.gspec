@@ -3,14 +3,25 @@
     email       id      email
     password    id      pass
     loginButton xpath   //input[@data-testid='royal_login_button']
+    loginContainer xpath //div[@data-testid='royal_login_form']
+
 
 = Main section =
 
     email:
-        left-of password
+        left-of password 13 to 15 px
+        inside loginContainer 13 to 15 px left
+        
+    password:
+        left-of loginButton
+        right-of email 13 to 15 px  
+        inside loginContainer  176 to 180 px left
 
     loginButton:
-        right-of password
+        right-of password 20 to 22 px
+        inside loginContainer 6 to 8 px right
+
+
 
 
 
