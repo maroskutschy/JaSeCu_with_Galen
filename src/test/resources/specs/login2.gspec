@@ -1,9 +1,12 @@
 # defining objects
 @objects
-    email       id      email
-    password    id      pass
-    loginButton xpath   //input[@data-testid='royal_login_button']
-    loginContainer xpath //div[@data-testid='royal_login_form']
+    email           id      email
+    password        id      pass
+    loginButton     xpath   //input[@data-testid='royal_login_button']
+    loginContainer  xpath   //div[@data-testid='royal_login_form']
+    recentLogins-*  xpath   //div[@class='_45ks']//div[contains(@class, '_63fz')]
+    inputFields-*   xpath   //div[contains(@class, 'uiStickyPlaceholderInput uiStickyPlaceholderEmptyInput')]
+
 
 
 = Main section =
@@ -11,15 +14,43 @@
     email:
         left-of password 13 to 15 px
         inside loginContainer 13 to 15 px left
+        width 150 px
+        aligned horizontally all password
+        #aligned vertically left password
         
     password:
         left-of loginButton
         right-of email 13 to 15 px  
         inside loginContainer  176 to 180 px left
+        width 150 px
+        width 100% of email/width
 
     loginButton:
         right-of password 20 to 22 px
         inside loginContainer 6 to 8 px right
+        width 36 px
+        width < 150 px
+
+    loginContainer:
+        visible
+        #absent
+        contains email, password, loginButton
+
+    recentLogins-1:
+        absent
+        #aligned horizontally all recentLogins-2
+
+    inputFields-1:
+        #this will fail
+        #aligned vertically left inputFields-2
+        aligned horizontally top inputFields-2
+        
+
+
+
+
+
+
 
 
 

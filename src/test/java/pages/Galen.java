@@ -13,10 +13,15 @@ import java.util.List;
 
 import static com.galenframework.api.Galen.checkLayout;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
+
 public class Galen {
 
   WebDriver driver = GeneralStepDefinitions.getDriver();
   String scenarioName = GeneralStepDefinitions.getScenarioName();
+  public static final Logger LOGGER = LoggerFactory.getLogger( BasicActions.class );
 
   public void validatePageUsingGalenSpecFile(String fileName) throws Throwable {
     //Galen galen = new Galen();
@@ -43,14 +48,16 @@ public class Galen {
     HtmlReportBuilder htmlReportBuilder = new HtmlReportBuilder();
 
     //Create a report under /target folder based on tests list
-    htmlReportBuilder.build(tests, "target//" + scenarioName + "//galen_report");
+    htmlReportBuilder.build(tests, "target//" + scenarioName + "-" + fileName + "//galen_report");
 
     //If layoutReport has errors Assert Fail
     if (layoutReport.errors() > 0)
     {
-      Assert.fail( "Galen Layout test of scenario: " + scenarioName + " failed, see report here: " + "file:///" + System.getProperty( "user.dir") + "\\target\\" + scenarioName + "\\galen_report\\report.html");
+      Assert.fail( "Galen Layout test of scenario: " + scenarioName + "-" + fileName + " failed, see report here: " + "file:///" + System.getProperty( "user.dir") + "\\target\\" + scenarioName + "-" + fileName + "\\galen_report\\report.html");
       //Assert.fail( "Galen Layout test of scenario: " + scenarioName + " failed, see report here: " + "<a href=\"file:///" + System.getProperty("user.dir") + "\\target\\" + scenarioName + "\\galen_report\\report.html\">Galen report</a>");
 
+    } else {
+      LOGGER.info( "Galen Layout test of scenario: " + scenarioName + "-" + fileName + " PASSED, see report here: " + "file:///" + System.getProperty( "user.dir") + "\\target\\" + scenarioName + "-" + fileName + "\\galen_report\\report.html" );
     }
 
   }

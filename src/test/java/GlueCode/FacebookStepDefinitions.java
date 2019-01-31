@@ -51,6 +51,12 @@ public class FacebookStepDefinitions {
     facebookIncorrectLoginPage.checkIncorrectMessage(message);
   }
 
+  @When("^I populate values: email \"([^\"]*)\" , password \"([^\"]*)\"$")
+  public void populateEmailAndPassword(String email, String password) throws Throwable {
+    facebookLoginPage = new FacebookLoginPage(driver  );
+    facebookLoginPage.populateEmailAndPassword(email, password  );
+  }
+
 
 
 

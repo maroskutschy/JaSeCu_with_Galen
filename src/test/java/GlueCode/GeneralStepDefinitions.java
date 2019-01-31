@@ -6,6 +6,7 @@ import cucumber.api.java.After;
 import cucumber.api.java.Before;
 import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
+import gherkin.formatter.model.Step;
 import org.openqa.selenium.Dimension;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -24,6 +25,7 @@ import static com.galenframework.api.Galen.checkLayout;
 
 
   private static String scenarioName;
+
 
   @Before
   public void openBrowser(Scenario scenario) {

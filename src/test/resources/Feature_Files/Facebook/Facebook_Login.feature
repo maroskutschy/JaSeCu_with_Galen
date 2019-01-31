@@ -9,6 +9,8 @@ Feature: Login to Facebook
   Scenario: Successful Login to Facebook with default credentials
     #Given I open browser for Galen Framework ""
     And I validate page using Galen Framework "login2" file
+    And I populate values: email "jasecuframework@gmail.com" , password "Jasecu12"
+    And I validate page using Galen Framework "login2_with_inserted_text" file
     When I successfully login to facebook with default credentials
     Then Facebook Welcome Page is successfully displayed
     #And I validate page using Galen Framework "login2.gspec" file

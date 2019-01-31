@@ -37,5 +37,12 @@ public class FacebookLoginPage extends BasicActions {
     return new FacebookIncorrectLoginPage( getDriver() );
   }
 
+  public void populateEmailAndPassword (String email, String password) {
+    clear(this.email, "email"  );
+    sendKeys(this.email, email, "email"  );
+    clear( this.password, "password" );
+    sendKeys( this.password, password, "password" );
+  }
+
 
 }
