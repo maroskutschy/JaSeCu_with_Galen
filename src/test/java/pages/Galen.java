@@ -25,7 +25,7 @@ public class Galen {
     //////////////////checkLayout(driver, fileName, asList("mobile"));
     //Create a layoutReport object
     //checkLayout function checks the layout and returns a LayoutReport object
-    LayoutReport layoutReport = checkLayout( driver, fileName, Arrays.asList( "desktop"));
+    LayoutReport layoutReport = checkLayout( driver, "/specs/" + fileName+ ".gspec", Arrays.asList( "desktop"));
 
     //Create a tests list
     List<GalenTestInfo> tests = new LinkedList<GalenTestInfo>();
