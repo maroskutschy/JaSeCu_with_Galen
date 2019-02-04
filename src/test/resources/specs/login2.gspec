@@ -17,6 +17,7 @@
         width 150 px
         aligned horizontally all password
         #aligned vertically left password
+        color-scheme 90% white, 0 to 1 % black, < 30% #f845b7 
         
     password:
         left-of loginButton
@@ -30,6 +31,7 @@
         inside loginContainer 6 to 8 px right
         width 36 px
         width < 150 px
+        image file imgs\Login_button_02.jpg, error 4%, tolerance 70
 
     loginContainer:
         visible
@@ -44,6 +46,19 @@
         #this will fail
         #aligned vertically left inputFields-2
         aligned horizontally top inputFields-2
+
+= All input fields =
+ 
+    #= will fail on item 5 and 6
+    inputFields-1, inputFields-2, inputFields-3, inputFields-6:
+    #inputFields-*: 
+        component loginContainers.gspec, isPageLoaded true, text "First name" 
+
+    global:
+        count any inputFields-* is 6
+        count visible inputFields-* is 4    
+        count absent inputFields-* is 2
+
         
 
 
