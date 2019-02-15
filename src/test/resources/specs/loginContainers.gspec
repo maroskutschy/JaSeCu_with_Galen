@@ -1,0 +1,12 @@
+# defining objects
+@objects
+    placeholder     xpath      //div[contains(@class, 'uiStickyPlaceholderInput uiStickyPlaceholderEmptyInput')]//div[@class='placeholder']
+       
+= Main section =
+         @if ${isPageLoaded}
+            placeholder:
+                visible
+                text is "${text}"
+
+
+        
