@@ -1,0 +1,12 @@
+# defining objects
+@objects
+    linksContainerUsingAnotherPlatform     xpath      //div[@class='links-container']//div[@class='using-platform-container']//div
+       
+= section =
+         @if ${isPageLoaded}
+            linksContainerUsingAnotherPlatform:
+                visible
+              
+
+
+        

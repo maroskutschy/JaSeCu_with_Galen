@@ -1,0 +1,18 @@
+# defining objects
+@objects
+    username        xpath   //input[@data-automation-id='loginUsername']
+    password        xpath   //input[@data-automation-id='loginPassword']
+    
+= Main section =
+
+    username:
+        text is "INT2_AUTOMATION_FT"
+                
+    password:
+        text is "Masternaut!"
+        
+
+
+
+
+

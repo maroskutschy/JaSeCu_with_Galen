@@ -1,0 +1,61 @@
+# defining objects
+@objects
+    username        xpath   //input[@data-automation-id='loginUsername']
+    password        xpath   //input[@data-automation-id='loginPassword']
+    signInButton    xpath   //span[@data-automation-id='loginButton']
+    loginContainer  xpath   //div[@id='linton_widgets_login_LoginBoxV2_0']
+    notExistingElement xpath //span[@data-automation-id='nonExistingElement']
+    resetRecoverElements-* xpath //div[@class='login-page-link-container']/span
+    linksContainerAlldivs-*     xpath      //div[@class='links-container']//div
+
+
+= Main section =
+
+    username:
+        above password 34 to 36 px
+        inside loginContainer 30 to 32 px left
+        width 356 px
+        aligned vertically all password
+        aligned vertically left password
+        color-scheme 99% white, 0 to 1 % black, < 30% #f845b7 
+
+    password:
+        above signInButton
+        below username 34 to 36 px  
+        inside loginContainer 30 to 32 px left
+        width 356 px
+        width 100% of username/width    
+
+    signInButton:
+        below password 72 to 74 px
+        inside loginContainer
+        width 44 px
+        width < 150 px
+
+    loginContainer:
+        visible
+        contains username, password, signInButton
+
+    notExistingElement:
+        absent
+
+    resetRecoverElements-1:
+        aligned vertically left resetRecoverElements-2    
+
+    global:
+        count any resetRecoverElements-* is 2
+        count visible resetRecoverElements-* is 2    
+        count absent resetRecoverElements-* is 0    
+
+    linksContainerAlldivs-*:
+        component linksContainerLinton.gspec, isPageLoaded true     
+
+
+
+
+
+
+
+
+        
+   

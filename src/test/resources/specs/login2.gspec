@@ -31,7 +31,7 @@
         inside loginContainer 6 to 8 px right
         width 36 px
         width < 150 px
-        image file imgs\Login_button_02.jpg, error 4%, tolerance 70
+        #image file imgs\Login_button_02.jpg, error 4%, tolerance 70
 
     loginContainer:
         visible
