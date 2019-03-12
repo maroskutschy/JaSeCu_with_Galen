@@ -12,9 +12,9 @@ public class TestDefaultValues {
 
   public static final String DEFAULT_OPERATING_SYSTEM = "Windows";
   public static final String DEFAULT_BROWSER = "Chrome";
-  public static final String DEFAULT_LINK = "https://linton-int.production.mnautuk.com";
-  public static final String DEFAULT_USER = "INT2_AUTOMATION_FT";
-  public static final String DEFAULT_PASSWORD = "Masternaut!";
+  public static final String DEFAULT_LINK = "xxx";
+  public static final String DEFAULT_USER = "yyy";
+  public static final String DEFAULT_PASSWORD = "xxx";
 
   private static String operatingSystem;
   private static String browser;

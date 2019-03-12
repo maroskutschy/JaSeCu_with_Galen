@@ -6,10 +6,10 @@
 = Main section =
 
     username:
-        text is "INT2_AUTOMATION_FT"
+        text is "xxx"
                 
     password:
-        text is "Masternaut!"
+        text is "yyy"
         
 
 
